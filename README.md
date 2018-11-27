@@ -71,3 +71,6 @@ CASE 4 >> CUSTOMER (0.95) (Since less than two years)
 discount = 4.196
 
 **** You can find these test cases in ShoppingApplicationTest class ****
+**** TO RUN TESTS FROM COMMAND LINE RUN THE BELOW COMMAND ****
+mvn -Dtest=ShoppingApplicationTest test
+**************************************************************
