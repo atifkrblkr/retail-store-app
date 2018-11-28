@@ -31,6 +31,18 @@ public final class UserDetails {
         return userSince;
     }
 
+    public String getUid() {
+        return uid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<String> getContacts() {
+        return contacts;
+    }
+
     @Override
     public String toString() {
         return "UserDetails{" +

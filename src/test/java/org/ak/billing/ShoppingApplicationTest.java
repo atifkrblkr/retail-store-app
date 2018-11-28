@@ -43,7 +43,7 @@ public class ShoppingApplicationTest {
        ShoppingApplication shoppingApplication = new ShoppingApplication(myStoreDBService,
                myCartService, myInvoiceService);
         LocalDateTime localDateTime = LocalDateTime.of(2018, 11, 22, 3, 15);
-        UserDetails userDetails = new UserDetails("Atif Karbelkar", UserTypes.AFFILIATE, localDateTime);
+        UserDetails userDetails = new UserDetails("Atif Karbelkar", UserTypes.AFFILIATE, localDateTime, "+91-9865-000-001", "atif@gmail.com");
         assertEquals("Bill Amount must me 73.5336 for this User",df.format(73.5336d), df.format(shoppingApplication.shop(userDetails)));
     }
 
@@ -52,7 +52,7 @@ public class ShoppingApplicationTest {
         ShoppingApplication shoppingApplication = new ShoppingApplication(myStoreDBService,
                 myCartService, myInvoiceService);
         LocalDateTime localDateTime = LocalDateTime.of(2018, 11, 22, 3, 15);
-        UserDetails userDetails = new UserDetails("Atif Karbelkar", UserTypes.EMPLOYEE, localDateTime);
+        UserDetails userDetails = new UserDetails("Atif Karbelkar", UserTypes.EMPLOYEE, localDateTime, "+91-9865-000-001", "atif@gmail.com");
         assertEquals("Bill Amount must me 57.1928 for this User",df.format(57.1928d), df.format(shoppingApplication.shop(userDetails)));
     }
 
@@ -61,7 +61,7 @@ public class ShoppingApplicationTest {
         ShoppingApplication shoppingApplication = new ShoppingApplication(myStoreDBService,
                 myCartService, myInvoiceService);
         LocalDateTime localDateTime = LocalDateTime.of(2018, 11, 22, 3, 15);
-        UserDetails userDetails = new UserDetails("Atif Karbelkar", UserTypes.CUSTOMER, localDateTime);
+        UserDetails userDetails = new UserDetails("Atif Karbelkar", UserTypes.CUSTOMER, localDateTime, "+91-9865-000-001", "atif@gmail.com");
         assertEquals("Bill Amount must me 81.7040 for this User",df.format(81.7040d), df.format(shoppingApplication.shop(userDetails)));
     }
 
@@ -70,7 +70,7 @@ public class ShoppingApplicationTest {
         ShoppingApplication shoppingApplication = new ShoppingApplication(myStoreDBService,
                 myCartService, myInvoiceService);
         LocalDateTime localDateTime = LocalDateTime.of(2015, 11, 22, 3, 15);
-        UserDetails userDetails = new UserDetails("Atif Karbelkar", UserTypes.CUSTOMER, localDateTime);
+        UserDetails userDetails = new UserDetails("Atif Karbelkar", UserTypes.CUSTOMER, localDateTime, "+91-9865-000-001", "atif@gmail.com");
         assertEquals("Bill Amount must me 77.6188 for this User",df.format(77.6188d), df.format(shoppingApplication.shop(userDetails)));
     }
 }
