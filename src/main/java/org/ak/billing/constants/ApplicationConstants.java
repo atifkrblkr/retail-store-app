@@ -1,5 +1,7 @@
 package org.ak.billing.constants;
 
+import java.text.DecimalFormat;
+
 public enum ApplicationConstants {
     CART_QUANTITY(2),
     SHOW_LOGS(true),
@@ -12,6 +14,8 @@ public enum ApplicationConstants {
     BILL_SPACE(" ");
 
     private final Object appCons;
+
+    public static final DecimalFormat df = new DecimalFormat("#.##");
 
     ApplicationConstants(Object appCons){
         this.appCons = appCons;
